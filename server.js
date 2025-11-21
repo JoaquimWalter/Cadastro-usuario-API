@@ -8,6 +8,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+const port = process.env.PORT || 3001
+//para postar o back end na Vercel
+
 
 
 app.get('/usuarios', async (req, res) => {
@@ -15,6 +18,7 @@ app.get('/usuarios', async (req, res) => {
   const users = await prisma.user.findMany()
 
   res.status(200).json(users)
+  return res.json('Hello World')
 })
 
 
