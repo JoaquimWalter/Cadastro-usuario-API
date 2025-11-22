@@ -8,8 +8,8 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const port = process.env.PORT || 3001;
-//para postar o back end na Vercel
+
+
 
 
 
